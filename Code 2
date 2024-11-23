@@ -12968,6 +12968,7 @@ if (usa == true) {
   
   runthisonlyonce = 0;
   runthisonlyonce2 = 0;
+  runthisonlyonce3 = 0;
   
   cyoAdventure = function(a) {
       ans = campaignTrail_temp.player_answers[campaignTrail_temp.player_answers.length - 1]
@@ -14708,6 +14709,7 @@ if (usafail < 2 && intervention2 == true){
   }
   
      if ((ans == 12034 || ans == 12035 || ans == 12036 || ans == 12037 || ans == 120371 || ans == 30091 || ans == 30092 || ans == 30093 || ans == 300931 || ans == 30094 || ans == 300941 && running == false)) {
+	 if (runthisonlyonce3 == 0) {
   if (womanpick == true) {
       if (wins  >= 3) {
           campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(8001);
@@ -14750,6 +14752,8 @@ if (usafail < 2 && intervention2 == true){
           campaignTrail_temp.questions_json[campaignTrail_temp.question_number + 1] = tunnel(8008);
           trumpvp = "Doug Burgum";
       }
+  }
+  runthisonlyonce3 = 1;
   }
   
   if (unitycabinet == true && wins >= 2) {
